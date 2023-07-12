@@ -1,0 +1,74 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.scrollDown {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:1rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+ 
+  animation-name: updown;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes updown {
+  0% {
+    transform: matrix(0, 1, -1, 0, 0, 0);
+  }
+  25% {
+    transform: matrix(0, 1, -1, 0, 0, -50);
+  }
+  50% {
+    transform: matrix(0, 1, -1, 0, 0, 0);
+  }
+  75% {
+    transform: matrix(0, 1, -1, 0, 0, -50);
+  }
+  100% {
+    transform: matrix(0, 1, -1, 0, 0, 0);
+  }
+}
+.scrollIcon{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ transform: translateY(0);
+ font-size: 2rem;
+    animation-name: mouseupdown;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.scrollicon:hover{
+ color: #d41057;
+}
+@keyframes mouseupdown{
+   0%   { transform: translateY(0);}
+  25%  { transform: translateY(2rem);}
+  50%  { transform: translateY(0);}
+  75%  { transform: translateY(-2rem);}
+  100% { transform: translateY(0);}
+}
+.socialIcons{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
