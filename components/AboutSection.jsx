@@ -1,14 +1,20 @@
 import React from 'react'
 import Tilt from 'react-parallax-tilt'
 import a from '../styles/AboutStyles.module.css'
+import HeadTitle from './HeadTitle'
 const AboutSection = () => {
   return (
     <div className={a.about_container}>
       <div className={a.main_container}>
         <div className={a.about_title}>
-          <span>About</span>
-          <br />
-          <span>me</span>
+          <span>A</span>
+          <span>b</span>
+          <span>o</span>
+          <span>u</span>
+          <span>t</span>
+
+          <span>m</span>
+          <span>e</span>
         </div>
         <div className={a.container}>
           <div className={a.img_container}>
@@ -17,7 +23,7 @@ const AboutSection = () => {
           <div className={a.desc_container}>
             <Tilt
               className={a.tilt}
-              tiltAngleYInitial={10}
+              tiltAngleYInitial={5}
               glareEnable={true}
               glareMaxOpacity={0.7}
               glareColor='#ffffff'
@@ -26,7 +32,10 @@ const AboutSection = () => {
             >
               <div className={a.glass_container}>
                 <div className={a.desc_title_container}>
-                  <h3 className={a.desc_title}>Me Myself And I</h3>
+                  <h3 className={a.desc_title}>
+                    
+                    <HeadTitle text={`Me Myself and I`} />
+                  </h3>
                 </div>
                 <div className={a.text_container}>
                   <p className={a.paragraph}>

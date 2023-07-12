@@ -4,14 +4,14 @@ import Tilt from 'react-parallax-tilt'
 import s from '../styles/SkillStyle.module.css'
 
 import dynamic from 'next/dynamic'
+import HeadTitle from './HeadTitle'
 const TextShpere = dynamic(() => import('./TextSphere'), { ssr: false })
 const SkillSection = () => {
   return (
     <div className={s.skill_container}>
-
       <div className={s.main_container}>
         <div className={s.skill_title}>
-          <span>Skills</span>
+          Skills
         </div>
         <div className={s.container}>
           <div className={s.desc_container}>
@@ -26,7 +26,12 @@ const SkillSection = () => {
             >
               <div className={s.glass_container}>
                 <div className={s.desc_title_container}>
-                  <h3 className={s.desc_title}>Me Myself And I</h3>
+                  <h3 className={s.desc_title}>
+                    {' '}
+                    <HeadTitle text={`Skills`} className={s.title} />{' '}
+                    <HeadTitle text={` & `} className={s.title} />{' '}
+                    <HeadTitle text={`Experience`} className={s.title} />
+                  </h3>
                 </div>
                 <div className={s.text_container}>
                   <p className={s.paragraph}>

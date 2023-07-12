@@ -4,23 +4,17 @@ import React, { useEffect, useState } from 'react'
 import TagCloud from 'TagCloud'
 
 const TextShpere = () => {
- const tagSize = (size)=> {
-if(size <=1000){
-  return size/4
-}
- }
+  
   const [size, setSize] = useState(window.innerWidth)
   const checkSize = () => {
     if (typeof window !== undefined) {
       setSize(window.innerWidth)
-      console.log(size)
     }
   }
-  
+
   useEffect(() => {
     window.addEventListener('resize', checkSize)
     return () => {
-      console.log('cleanup')
       window.removeEventListener('resize', checkSize)
     }
   }, [size])
@@ -35,13 +29,12 @@ if(size <=1000){
         'JavaScript',
         'React JS',
         'Next JS',
-        'Nuxt',
         'Node JS',
         'Babel',
         'Jquery',
         'ES6',
         'GIT',
-        'GITHUB',
+        'Github',
         'Express JS',
         'Mongo DB',
         'Wordpress',
@@ -52,14 +45,16 @@ if(size <=1000){
         'Mongoose',
         'Firebase',
         'Next Auth',
+        'ES6',
         'ES7',
         'Redux',
         'UI / UX',
         'Figma',
+        'Typescript',
       ]
 
       const options = {
-        radius: `${size>=1000? size/5+100 : size/3+120}`,
+        radius: `${size >= 1000 ? size / 5 + 100 : size / 3 + 120}`,
         maxSpeed: 'fast',
         initSpeed: 'fast',
         keep: true,

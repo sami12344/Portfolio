@@ -95,7 +95,7 @@ const Footer = () => {
         </div>
       </div>
       <hr className={f.hr} />
-      <p className={f.copyright}> Copyright © 2021 By Sami Islam</p>
+      <p className={f.copyright}> Copyright © 2023 By Sami Islam</p>
     </footer>
   )
 }
